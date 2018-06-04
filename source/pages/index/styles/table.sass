@@ -1,0 +1,41 @@
+.table
+  table-layout: fixed
+  width: 100%
+  border-spacing: 0
+  margin-bottom: 30px
+
+  thead
+    background-color: #fff
+
+  tr
+    height: 38px
+    line-height: 38px
+    &:nth-child(odd)
+      background-color: #fafafa
+
+  th
+    width: 20%
+    text-align: center
+    background-color: #fff
+    &:first-child
+      width: 40%
+      text-align: left
+
+  td
+    overflow: hidden
+    white-space: nowrap
+    text-overflow: ellipsis
+    text-align: center
+
+    &:first-child
+      text-align: left
+
+  &__underline
+    text-decoration: underline
+
+  &__license
+    font-weight: bold
+
+  .icon
+    vertical-align: middle
+    color: #63c43a

@@ -1,0 +1,305 @@
+extends ../base
+block title
+  |Index page
+block main
+  header.header
+    div.container
+      div.header__wrap
+        div.header__left
+          div.logo
+            a.logo__link(href='#')
+              img.logo__img(src=require('./../../media/logo.png'))
+        div.header__right
+          div.antivirus
+            div.antivirus__left
+              img.logo__img(src=require('./../../media/comodo.png'))
+            div.antivirus__right
+              img(src=require('./../../media/antivirus.png'))
+
+  main.main
+    div.general-banner
+      div.container
+        div.general-banner__wrap
+          div.general-banner__left
+            img.general-banner__img(src=require('./../../media/box_80_orange.png'))
+          div.general-banner__right
+            div.general-banner__info
+              h1.title.general-banner__title Save up to <span class='orange'>$80</span> off
+              p.general-banner__subtitle Total Anti-Malware protection for a limited time only
+              p.general-banner__name Plumbytes Anti-Malware 2018
+              p.general-banner__subtitle All The benefits You Need at a price that can't be beaten
+              ul.list
+                li.list__el
+                  span.icon.icon-check
+                  span.list__text Real-Time Antivirus Protection
+                li.list__el
+                  span.icon.icon-check
+                  span.list__text Windows Compatible
+                li.list__el
+                  span.icon.icon-check
+                  span.list__text Safeguard Your Identity & Online Purchases
+                li.list__el
+                  span.icon.icon-check
+                  span.list__text 30 Day Money Back Guarantee
+              div.general-banner__buy
+                button(type='button').general-banner__btn.btn.is-large BUY NOW (only 19.95 USD)
+                span.general-banner__price $19.95
+                span.general-banner__price.is-old <strike>$99.95</strike>
+              div.rateit(data-rateit-value="5", data-rateit-resetable="false")
+
+    section.section.is-boxes
+      div.container
+        div.boxes
+          div.box
+            div.box__wrap
+              span.box__title Plumbytes Anti-Malware 2018
+              span.box__badge Complete Protection
+              img.box__img(src=require('./../../media/box_90.png'))
+              span.box__price.is-old <strike>$149.95</strike>
+              span.box__price $59.95
+              button(type='button').btn BUY NOW
+          div.box
+            div.box__wrap
+              span.box__title Plumbytes Anti-Malware 2018
+              span.box__badge Complete Protection
+              img.box__img(src=require('./../../media/box_80.png'))
+              span.box__price.is-old <strike>$149.95</strike>
+              span.box__price $59.95
+              button(type='button').btn BUY NOW
+          div.box
+            div.box__wrap
+              span.box__title Plumbytes Anti-Malware 2018
+              span.box__badge Complete Protection
+              img.box__img(src=require('./../../media/box_80_orange.png'))
+              span.box__price.is-old <strike>$149.95</strike>
+              span.box__price $59.95
+              button(type='button').btn BUY NOW
+    section.section.is-feature
+      div.feature.container
+        table.table
+          thead
+            tr
+              th Compare features
+              th Plumbytes Anti-Malware 2018
+              th Plumbytes Anti-Malware 2018
+              th Plumbytes Anti-Malware 2018
+          tbody
+            tr
+              td Advanced Ransomware Protection
+              td
+               span.icon.icon-check
+              td
+                span.icon.icon-check
+              td
+                span.icon.icon-check
+            tr
+              td Real-Time Antivirus Protection
+              td
+                span.icon.icon-check
+              td
+                span.icon.icon-check
+              td
+                span.icon.icon-check
+            tr
+              td Virus, Trojans, Adware, Spyware & Malware Protection
+              td
+                span.icon.icon-check
+              td
+                span.icon.icon-check
+              td
+                span.icon.icon-check
+            tr
+              td Protection Against Phishing Scam
+              td
+                span.icon.icon-check
+              td
+                span.icon.icon-check
+              td
+                span.icon.icon-check
+            tr
+              td Free Up System Space with Disk Cleaner
+              td
+                span.icon.icon-check
+              td
+                span.icon.icon-check
+              td
+                span.icon.icon-check
+            tr
+              td PC Performance & Optimization Tools
+              td
+                span.icon.icon-check
+              td
+                span.icon.icon-check
+              td
+                span.icon.icon-check
+            tr
+              td Stay Safe Online With Web Shield Extension
+              td
+                span.icon.icon-check
+              td
+                span.icon.icon-check
+              td
+            tr
+              td Antivirus eBook
+              td
+                span.icon.icon-check
+              td
+                span.icon.icon-check
+              td
+            tr
+              td Safe Password Vault
+              td
+                span.icon.icon-check
+              td
+              td
+            tr
+              td 24/7 Priority Super Fast Support
+              td
+                span.icon.icon-check
+              td
+              td
+            tr
+              td 30 Day Money Back Guarantee
+              td
+                span.table__underline INCLUDED
+              td
+                span.table__underline INCLUDED
+              td
+                span.table__underline INCLUDED
+            tr
+              td Protect Multiple Devices
+              td
+                span.table__license 5 Licenses
+              td
+                span.table__license 3 Licenses
+              td
+                span.table__license 1 Licenses
+            tr
+              td
+              td
+                button(type='button').btn.is-small BUY NOW
+              td
+                button(type='button').btn.is-small BUY NOW
+              td
+                button(type='button').btn.is-small BUY NOW
+        div * Stats provided are taken from signups between October 2016 - February 2018 across all affiliated antivirus brands.
+    section.section.is-benefits
+      div.container
+        div.benefits
+          h1.title Amazing benefits, Great Results
+          div.benefits__group
+            figure.benefit
+              div.benefit__icon
+                span.icon.icon-1-antivirus
+              figcaption.benefit__text
+                dl
+                  dt.benefit__title Antivirus
+                  dd.benefit__descr Our system scan locates, quarantines and eliminates malware, trojans, adware, spyware and more insuring you are protected against the latest threats.
+            figure.benefit
+              div.benefit__icon
+                span.icon.icon-2-boost
+              figcaption.benefit__text
+                dl
+                  dt.benefit__title Boost Memory
+                  dd.benefit__descr Is your device clogged up with duplicate or junk files? Our File Manager will help locate and remove any files that are uselessly taking up valuable space.
+            figure.benefit
+              div.benefit__icon
+                span.icon.icon-3-protection
+              figcaption.benefit__text
+                dl
+                  dt.benefit__title Internet Protection
+                  dd.benefit__descr Our powerful security technology will protect you against all cyber-threats, from adware to malicious malware that targets and steals your data.
+            figure.benefit
+              div.benefit__icon
+                span.icon.icon-4-performance
+              figcaption.benefit__text
+                dl
+                  dt.benefit__title Browsing Performance
+                  dd.benefit__descr Let us help improve your internet browsing speed & experience. Within just a few clicks we can remove any unwanted cache files and old history.
+            figure.benefit
+              div.benefit__icon
+                span.icon.icon-5-sys-performance
+              figcaption.benefit__text
+                dl
+                  dt.benefit__title Enhance System Performance
+                  dd.benefit__descr Over time your computer will naturally slow down. We help identify specific errors and programs which impact performance and slow down your experience.
+            figure.benefit
+              div.benefit__icon
+                span.icon.icon-6-firewall
+              figcaption.benefit__text
+                dl
+                  dt.benefit__title Firewall
+                  dd.benefit__descr We understand that privacy is important which is why we prevent unauthorized access to your private data with our Two-Way Firewall.
+    section.section.is-requirement
+      div.requirement
+        div.container
+          div.requirement__wrap
+            h1.title System Requirements
+            span.requirement__text PC with Windows <strong>10, 8.1, 8, 7, Vista or XP SP3</strong> (32 and 64 bit)
+            span.requirement__text <strong>1024 MB+ RAM</strong> and <strong>800MB of hard disk space</strong>.
+            div.requirement__system
+              span.requirement__icon.icon.icon-win-10
+              span.requirement__text Windows 10 Compatible
+    section.section.is-protect
+      div.protect
+        div.container
+          div.protect__wrap
+            span.protect__text Protect Your PC Today with the Plumbytes Anti-Malware 2018!
+            button(type='button').btn.is-large Get Protected Now
+
+    section.section
+      div.popup#popup
+        span.popup__close.icon.icon-close
+        h1.popup__title WAIT... <span class='orange'>SAVE $100 TODAY!</span>
+        p.popup__subtitle Get Our Plumbytes Anti-Malware 2018 For Only $19.95
+        div.popup__wrap
+          div.popup__left
+            img.popup__img(src=require('./../../media/box_80_orange.png'))
+          div.popup__right
+            form(action='#').popup__form
+              input(type='text' placeholder='Full Name' required).popup__input
+              input(type='email' placeholder='Email Address' required).popup__input
+              input(type='password' placeholder='Choose a Password' pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required).popup__input
+            div.popup__btn#popup__btn
+              button(type='button').btn.is-large Create your account
+            div.popup__agreement
+              input(id='agreement' type='checkbox' checked='checked').popup__checkbox
+              span By creating an account you agree to our <a href='#'>Terms</a> and <a href='#'>Privacy Policy</a>
+  footer.footer
+    div.container
+      div.footer__top
+        nav.nav
+          ul.nav__list
+            li.nav__el
+              a.nav__link EULA
+            li.nav__el
+              a.nav__link Terms of Use
+            li.nav__el
+              a.nav__link Privacy
+            li.nav__el
+              a.nav__link Policy
+            li.nav__el
+              a.nav__link Auto-Renew Policy
+            li.nav__el
+              a.nav__link Refund Policy
+            li.nav__el
+              a.nav__link Money Back Guarantee
+
+        div.language-wrap
+          span.language__ico.icon.is-arrow
+          ul.language
+            li.language__el.is-active(data-lang='en')
+              a(href='#').language__link English
+            li.language__el
+              a(href='#').language__link Español
+            li.language__el
+              a(href='#').language__link Deutsch
+            li.language__el
+              a(href='#').language__link Italiano
+            li.language__el
+              a(href='#').language__link Українська
+            li.language__el
+              a(href='#').language__link Русский
+
+      div.footer__bottom
+        div.copyright © 2018 Plumbytes Software, Inc. All rights reserved. Plumbytes Antimalware.
