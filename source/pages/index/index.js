@@ -7,19 +7,19 @@ $( document ).ready(function() {
   const languageEl = document.getElementsByClassName('language__el');
   const language = document.getElementsByClassName('language');
   const popup = document.getElementById('popup');
-  const btnPopup = document.getElementById('popup__btn');
+  const btnPopup = document.getElementById('popup__close');
 
-  const delayPopup = 5000;
-
-  function showPopup() {
-    $(popup).addClass("is-visible");
-  }
-
-  setTimeout(showPopup, delayPopup);
-
-  $(btnPopup).click(function () {
-    $(popup).removeClass("is-visible");
-  });
+  // const delayPopup = 5000;
+  //
+  // function showPopup() {
+  //   $(popup).addClass("is-visible");
+  // }
+  //
+  // setTimeout(showPopup, delayPopup);
+  //
+  // $(btnPopup).click(function () {
+  //   $(popup).removeClass("is-visible");
+  // });
 
   $(language).click(function(){
     $(this).toggleClass('is-open');

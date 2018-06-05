@@ -42,12 +42,27 @@ img
     height: 12px
     background: url('../../media/icon_arrow.png') no-repeat
 
+.popup-wrap
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+  //background-color: rgba(0,0,0,0.3)
+  //z-index: 1
 .popup
-  position: relative
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
   max-width: 660px
   padding: 40px 60px 60px
   background-color: #fff
   display: none
+  z-index: 999
   &.is-visible
     display: block
 

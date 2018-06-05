@@ -249,7 +249,7 @@ block main
 
     section.section
       div.popup#popup
-        span.popup__close.icon.icon-close
+        span.popup__close.icon.icon-close#popup__close
         h1.popup__title WAIT... <span class='orange'>SAVE $100 TODAY!</span>
         p.popup__subtitle Get Our Plumbytes Anti-Malware 2018 For Only $19.95
         div.popup__wrap
@@ -260,11 +260,12 @@ block main
               input(type='text' placeholder='Full Name' required).popup__input
               input(type='email' placeholder='Email Address' required).popup__input
               input(type='password' placeholder='Choose a Password' pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required).popup__input
-            div.popup__btn#popup__btn
+            div.popup__btn
               button(type='button').btn.is-large Create your account
             div.popup__agreement
               input(id='agreement' type='checkbox' checked='checked').popup__checkbox
               span By creating an account you agree to our <a href='#'>Terms</a> and <a href='#'>Privacy Policy</a>
+
   footer.footer
     div.container
       div.footer__top
