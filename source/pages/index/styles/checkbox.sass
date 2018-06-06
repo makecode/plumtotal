@@ -1,0 +1,32 @@
+.checkbox
+  input
+    &:checked, &:not(:checked)
+      position: absolute
+      left: -9999px
+    &:checked + span, &:not(:checked) + span
+      position: relative
+      padding-left: 25px
+      cursor: pointer
+      display: inline-block
+    &:checked + span:before, &:not(:checked) + span:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 3px
+      width: 16px
+      height: 16px
+      border: 1px solid #e6e6e6
+      background: #f5f5f5
+    &:checked + span:after
+      content: ''
+      width: 17px
+      height: 17px
+      background: url("../../media/icon_check.png") no-repeat
+      position: absolute
+      top: 6px
+      left: 2px
+      transition: all 0.2s ease
+  span
+    a
+      &:hover
+        text-decoration: underline

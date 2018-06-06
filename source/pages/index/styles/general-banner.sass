@@ -1,37 +1,51 @@
 .general-banner
-  padding: 70px 0
+  position: relative
+  padding-top: 70px
+  padding-bottom: 32px
   background: url('../../media/main_bg.png') top center no-repeat
+  background-size: cover
 
   &__wrap
     display: flex
     flex-direction: row
 
   &__left
-    margin-right: 80px
+    width: 33%
+
+  &__right
+    width: 67%
+    //margin-right: 80px
+
+  &__img
+    display: block
+    max-width: none
+    position: relative
+    left: -135px
 
   &__title
-    font-size: 34px
+    font-size: 41px
     font-weight: 600
+    text-transform: uppercase
+
+  &__subtitle
+    font-size: 18px
+    letter-spacing: -.6px
 
   &__name
+    margin-top: 13px
+    font-size: 20px
     font-weight: 600
+    letter-spacing: .1px
 
   &__buy
     display: flex
     flex-direction: row
     align-items: center
 
-  &__price
-    display: block
-    font-size: 40px
-    color: #ff7200
-
-    &.is-old
-      font-size: 24px
-      color: #949494
-
   &__btn
     margin-right: 10px
+    margin-bottom: 15px
 
   .list
-    margin: 20px 0
+    margin-top: 15px
+    margin-bottom: 25px

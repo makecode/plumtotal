@@ -1,4 +1,5 @@
 .box
+  position: relative
   text-align: center
 
   &__wrap
@@ -6,22 +7,20 @@
     flex-direction: column
     align-items: center
 
-  &__badge
-    font-size: 16px
-    text-transform: uppercase
-    color: #f44336
-
-    &.is-violet
-      color: #8a4ff5
+  &__title
+    margin-bottom: 30px
+    font-size: 22px
+    font-weight: 600
 
   &__img
-    width: 170px
+    position: relative
+    left: -42px
+    margin-top: 20px
+    width: 270px
 
   &__price
-    display: block
-    font-size: 40px
-    color: #ff7200
+    margin-bottom: 20px
 
-    &.is-old
-      font-size: 24px
-      color: #949494
+  .badge
+    position: absolute
+    top: 70px

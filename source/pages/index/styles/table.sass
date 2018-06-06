@@ -2,26 +2,32 @@
   table-layout: fixed
   width: 100%
   border-spacing: 0
-  margin-bottom: 30px
+  margin-bottom: 35px
 
   thead
     background-color: #fff
 
   tr
-    height: 38px
-    line-height: 38px
+    height: 40px
     &:nth-child(odd)
       background-color: #fafafa
 
   th
-    width: 20%
+    height: 85px
+    width: 19%
+    line-height: 1.4
+    font-size: 15px
     text-align: center
     background-color: #fff
     &:first-child
-      width: 40%
+      font-size: 38px
+      font-weight: 300
+      letter-spacing: -.9px
+      width: 43%
       text-align: left
 
   td
+    font-size: 15px
     overflow: hidden
     white-space: nowrap
     text-overflow: ellipsis
@@ -30,12 +36,28 @@
     &:first-child
       text-align: left
 
+    .btn
+      display: inline-block
+
   &__underline
     text-decoration: underline
 
   &__license
-    font-weight: bold
+    font-size: 15px
+    letter-spacing: -.6px
+    font-weight: 600
+
+  &__name
+    padding-bottom: 20px
+    height: 100%
+    display: flex
+    flex-direction: column
+    justify-content: flex-end
 
   .icon
+    font-size: 17px
     vertical-align: middle
     color: #63c43a
+
+  .badge
+    display: block

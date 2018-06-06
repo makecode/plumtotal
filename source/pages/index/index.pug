@@ -12,10 +12,10 @@ block main
         div.header__right
           div.antivirus
             div.antivirus__left
-              img.logo__img(src=require('./../../media/comodo.png'))
+              a.logo__link
+                img.logo__img(src=require('./../../media/comodo.png'))
             div.antivirus__right
               img(src=require('./../../media/antivirus.png'))
-
   main.main
     div.general-banner
       div.container
@@ -42,37 +42,63 @@ block main
                   span.icon.icon-check
                   span.list__text 30 Day Money Back Guarantee
               div.general-banner__buy
-                button(type='button').general-banner__btn.btn.is-large BUY NOW (only 19.95 USD)
-                span.general-banner__price $19.95
-                span.general-banner__price.is-old <strike>$99.95</strike>
-              div.rateit(data-rateit-value="5", data-rateit-resetable="false")
+                div.buy
+                  div.buy__left
+                    button(type='button').general-banner__btn.btn.is-large BUY NOW (only 19.95 USD)
+                    div.rateit-wrap
+                      div.rateit(data-rateit-value="5", data-rateit-resetable="false")
+                  div.buy__right
+                    span.price $19.95
+                    span.price.is-old <strike>$99.95</strike>
+
+      div.info
+        div.info__left
+          span.icon.icon-mostrecent
+        div.info__right
+          span.info__title Most recent purchase
+          p.info__descr Less than a minute ago
+
+      div.info.is-green
+        div.info__left
+          span.icon.icon-claimed
+        div.info__right
+          span.info__title 101 People Claimed Offer
+          p.info__descr in the last hour
 
     section.section.is-boxes
       div.container
         div.boxes
           div.box
             div.box__wrap
-              span.box__title Plumbytes Anti-Malware 2018
-              span.box__badge Complete Protection
+              span.box__title Plumbytes
+                br
+                | Anti-Malware 2018
+              span.badge Complete Protection
               img.box__img(src=require('./../../media/box_90.png'))
-              span.box__price.is-old <strike>$149.95</strike>
-              span.box__price $59.95
+              div.box__price
+                span.price.is-old <strike>$149.95</strike>
+                span.price $59.95
               button(type='button').btn BUY NOW
           div.box
             div.box__wrap
-              span.box__title Plumbytes Anti-Malware 2018
-              span.box__badge Complete Protection
+              span.box__title Plumbytes
+                br
+                | Anti-Malware 2018
+              span.badge.is-violet Most Popular
               img.box__img(src=require('./../../media/box_80.png'))
-              span.box__price.is-old <strike>$149.95</strike>
-              span.box__price $59.95
+              div.box__price
+                span.price.is-old <strike>$149.95</strike>
+                span.price $59.95
               button(type='button').btn BUY NOW
           div.box
             div.box__wrap
-              span.box__title Plumbytes Anti-Malware 2018
-              span.box__badge Complete Protection
+              span.box__title Plumbytes
+                br
+                | Anti-Malware 2018
               img.box__img(src=require('./../../media/box_80_orange.png'))
-              span.box__price.is-old <strike>$149.95</strike>
-              span.box__price $59.95
+              div.box__price
+                span.price.is-old <strike>$149.95</strike>
+                span.price $59.95
               button(type='button').btn BUY NOW
     section.section.is-feature
       div.feature.container
@@ -80,9 +106,26 @@ block main
           thead
             tr
               th Compare features
-              th Plumbytes Anti-Malware 2018
-              th Plumbytes Anti-Malware 2018
-              th Plumbytes Anti-Malware 2018
+              th
+                div.table__name
+                  span.badge Complete Protection
+                  span.table__title
+                    |Plumbytes
+                    br
+                    | Anti-Malware 2018
+              th
+                div.table__name
+                  span.badge.is-violet Most Popular
+                  span.table__title
+                    |Plumbytes
+                    br
+                    | Anti-Malware 2018
+              th
+                div.table__name
+                  span.table__title
+                    |Plumbytes
+                    br
+                    | Anti-Malware 2018
           tbody
             tr
               td Advanced Ransomware Protection
@@ -133,7 +176,23 @@ block main
               td
                 span.icon.icon-check
             tr
+              td Remote Firewall Protection
+              td
+                span.icon.icon-check
+              td
+                span.icon.icon-check
+              td
+                span.icon.icon-check
+            tr
               td Stay Safe Online With Web Shield Extension
+              td
+                span.icon.icon-check
+              td
+                span.icon.icon-check
+              td
+                span.icon.icon-check
+            tr
+              td Web Browser Cleaner & Manager
               td
                 span.icon.icon-check
               td
@@ -182,11 +241,11 @@ block main
                 button(type='button').btn.is-small BUY NOW
               td
                 button(type='button').btn.is-small BUY NOW
-        div * Stats provided are taken from signups between October 2016 - February 2018 across all affiliated antivirus brands.
+        div.feature__text * Stats provided are taken from signups between October 2016 - February 2018 across all affiliated antivirus brands.
     section.section.is-benefits
       div.container
         div.benefits
-          h1.title Amazing benefits, Great Results
+          h1.title.benefits__title Amazing benefits, Great Results
           div.benefits__group
             figure.benefit
               div.benefit__icon
@@ -234,7 +293,7 @@ block main
       div.requirement
         div.container
           div.requirement__wrap
-            h1.title System Requirements
+            h1.title.requirement__title System Requirements
             span.requirement__text PC with Windows <strong>10, 8.1, 8, 7, Vista or XP SP3</strong> (32 and 64 bit)
             span.requirement__text <strong>1024 MB+ RAM</strong> and <strong>800MB of hard disk space</strong>.
             div.requirement__system
@@ -245,26 +304,7 @@ block main
         div.container
           div.protect__wrap
             span.protect__text Protect Your PC Today with the Plumbytes Anti-Malware 2018!
-            button(type='button').btn.is-large Get Protected Now
-
-    section.section
-      div.popup#popup
-        span.popup__close.icon.icon-close#popup__close
-        h1.popup__title WAIT... <span class='orange'>SAVE $100 TODAY!</span>
-        p.popup__subtitle Get Our Plumbytes Anti-Malware 2018 For Only $19.95
-        div.popup__wrap
-          div.popup__left
-            img.popup__img(src=require('./../../media/box_80_orange.png'))
-          div.popup__right
-            form(action='#').popup__form
-              input(type='text' placeholder='Full Name' required).popup__input
-              input(type='email' placeholder='Email Address' required).popup__input
-              input(type='password' placeholder='Choose a Password' pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$" required).popup__input
-            div.popup__btn
-              button(type='button').btn.is-large Create your account
-            div.popup__agreement
-              input(id='agreement' type='checkbox' checked='checked').popup__checkbox
-              span By creating an account you agree to our <a href='#'>Terms</a> and <a href='#'>Privacy Policy</a>
+            button(type='button').btn.is-medium Get Protected Now
 
   footer.footer
     div.container
@@ -290,17 +330,53 @@ block main
           span.language__ico.icon.is-arrow
           ul.language
             li.language__el.is-active(data-lang='en')
-              a(href='#').language__link English
+              span.language__link
+                img.language__img(src=require('./../../media/flag_uk.png'))
+                span.language__name English
             li.language__el
-              a(href='#').language__link Español
+              span.language__link
+                img.language__img(src=require('./../../media/flag_spain.png'))
+                span.language__name Español
             li.language__el
-              a(href='#').language__link Deutsch
+              span.language__link
+                img.language__img(src=require('./../../media/flag_ge.png'))
+                span.language__name Deutsch
             li.language__el
-              a(href='#').language__link Italiano
+              span.language__link
+                img.language__img(src=require('./../../media/flag_italy.png'))
+                span.language__name Italiano
             li.language__el
-              a(href='#').language__link Українська
+              span.language__link
+                img.language__img(src=require('./../../media/flag_ukraine.png'))
+                span.language__name Українська
             li.language__el
-              a(href='#').language__link Русский
+              span.language__link
+                img.language__img(src=require('./../../media/flag_ru.png'))
+                span.language__name Русский
 
       div.footer__bottom
         div.copyright © 2018 Plumbytes Software, Inc. All rights reserved. Plumbytes Antimalware.
+
+    div.popup-overlay#popup-overlay
+    div.popup#popup
+      span.popup__close.icon.icon-close#popup__close
+      div.popup__header
+        h1.popup__title WAIT... <span class='orange'>SAVE $100 TODAY!</span>
+        p.popup__subtitle Get Our Plumbytes Anti-Malware 2018 For Only $19.95
+      div.popup__body
+        div.popup__content
+          form(action='#').popup__form
+            div.input.is-error
+              input(type='text' placeholder='Full Name').input__el
+              span.input__icon.icon.icon-alert
+            div.input
+              input(type='email' placeholder='Email Address').input__el
+              spaninput__icon.icon.icon-alert
+            div.input
+              input(type='password' placeholder='Choose a Password' pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$").input__el
+              span.input__icon.icon.icon-alert
+          button(type='button').popup__btn.btn.is-medium Create your account
+          label.checkbox
+            input(id='agreement' type='checkbox' checked='checked').checkbox__el
+            span By creating an account you agree to our <a href='#'>Terms</a> and <a href='#'>Privacy Policy</a>
+

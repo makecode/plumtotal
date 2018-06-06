@@ -4,22 +4,28 @@ import './index.sass';
 import 'jquery.rateit';
 
 $( document ).ready(function() {
-  const languageEl = document.getElementsByClassName('language__el');
   const language = document.getElementsByClassName('language');
+  const languageEl = document.getElementsByClassName('language__el');
   const popup = document.getElementById('popup');
+  const popupOverlay = document.getElementById('popup-overlay');
   const btnPopup = document.getElementById('popup__close');
 
-  // const delayPopup = 5000;
-  //
-  // function showPopup() {
-  //   $(popup).addClass("is-visible");
-  // }
-  //
-  // setTimeout(showPopup, delayPopup);
-  //
-  // $(btnPopup).click(function () {
-  //   $(popup).removeClass("is-visible");
-  // });
+  $(popupOverlay).fadeIn(400,
+    function(){
+      $(popup)
+        .css('display', 'block')
+        .animate({opacity: 1, top: '50%'}, 200);
+    });
+
+  $(btnPopup, popupOverlay).click( function(){
+    $(popup)
+      .animate({opacity: 0, top: '45%'}, 200,
+        function(){ // пoсле aнимaции
+          $(this).css('display', 'none');
+          $(popupOverlay).fadeOut(400);
+        }
+      );
+  });
 
   $(language).click(function(){
     $(this).toggleClass('is-open');
@@ -29,7 +35,5 @@ $( document ).ready(function() {
   $(languageEl).removeClass('is-active');
     $(this).toggleClass('is-active');
   });
-
-
 
 });
