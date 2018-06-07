@@ -11,6 +11,7 @@
   cursor: pointer
 
 .popup
+  display: none
   position: fixed
   left: 50%
   top: 50%
@@ -18,19 +19,15 @@
   width: 660px
   padding: 40px 0 50px
   background-color: #fff
-  display: none
-  opacity: 0
   z-index: 5
   box-sizing: border-box
-
-  &.is-visible
-    display: block
 
   &__close
     position: absolute
     top: 7px
     right: 7px
     cursor: pointer
+    z-index: 7
 
   &__header
     text-align: center
