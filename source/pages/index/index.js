@@ -9,6 +9,8 @@ $( document ).ready(function() {
   const popupOverlay = document.getElementById('popup-overlay');
   const popup = document.getElementById('popup');
   const btnPopup = document.getElementById('popup__close');
+  const infoGreen = document.getElementById('info-green');
+  const infoOrange = document.getElementById('info-orange');
 
   $('body').mouseleave(function(event) {
     if(event.clientY <= 0 ) {
@@ -17,11 +19,19 @@ $( document ).ready(function() {
     }
   });
 
+  const delayPopup = 3000;
+
+  function showPopup() {
+    $(infoGreen).addClass("is-visible");
+    $(infoOrange).addClass("is-visible");
+  }
+
+  setTimeout(showPopup, delayPopup);
+
   $(btnPopup).click(function () {
     $(popup).toggle();
     $(popupOverlay).toggle();
   });
-
 
   $(language).click(function(){
     $(this).toggleClass('is-open');

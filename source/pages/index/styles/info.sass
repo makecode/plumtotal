@@ -1,7 +1,7 @@
 .info
-  position: absolute
-  top: 140px
-  right: 10px
+  position: fixed
+  top: 210px
+  right: -260px
   padding: 10px
   width: 250px
   display: flex
@@ -9,9 +9,13 @@
   align-items: center
   border: 1px solid #f66e00
   color: #f66e00
+  background-color: #f8eade
   box-sizing: border-box
-  background-color: rgba(#f66e00, .1)
+  transition: right .3s ease-in-out
   z-index: 2
+
+  &.is-visible
+    right: 10px
 
   &__left
     margin-right: 10px
@@ -29,10 +33,14 @@
     line-height: 0
 
   &.is-green
-    top: 215px
+    top: 285px
     border-color: #4eac26
     color: #4eac26
-    background-color: rgba(#4eac26, .1)
+    background-color: #e6f0e2
+    transition: right .6s ease-in-out
+
+    .is-visible
+      right: 10px
 
     .icon
       color: #4eac26
