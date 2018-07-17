@@ -28,11 +28,6 @@ $( document ).ready(function() {
 
   setTimeout(showPopup, delayPopup);
 
-  $(btnPopup).click(function () {
-    $(popup).toggle();
-    $(popupOverlay).toggle();
-  });
-
   $(language).click(function(){
     $(this).toggleClass('is-open');
   });
@@ -42,4 +37,16 @@ $( document ).ready(function() {
     $(this).toggleClass('is-active');
   });
 
+  // close popup
+  $(btnPopup).click(function () {
+    $(popup).toggle();
+    $(popupOverlay).toggle();
+  });
+
+  $(document).on('mousedown', function (e) {
+    if (e.target === popupOverlay) {
+      $(popup).toggle();
+      $(popupOverlay).toggle();
+    }
+  });
 });
